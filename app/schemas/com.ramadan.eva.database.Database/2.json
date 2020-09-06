@@ -1,0 +1,70 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 2,
+    "identityHash": "54d83cf698e0d9b09e2e7cdcc5d4a5f1",
+    "entities": [
+      {
+        "tableName": "CONTACTS",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`CONTACT_ID` TEXT NOT NULL, `NAME` TEXT, `EMAIL` TEXT, `ADDRESS` TEXT, `GENDER` TEXT, `MOBILE` TEXT, `HOME` TEXT, PRIMARY KEY(`CONTACT_ID`))",
+        "fields": [
+          {
+            "fieldPath": "contactID",
+            "columnName": "CONTACT_ID",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "NAME",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "email",
+            "columnName": "EMAIL",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "address",
+            "columnName": "ADDRESS",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "gender",
+            "columnName": "GENDER",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mobile",
+            "columnName": "MOBILE",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "home",
+            "columnName": "HOME",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "CONTACT_ID"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '54d83cf698e0d9b09e2e7cdcc5d4a5f1')"
+    ]
+  }
+}
