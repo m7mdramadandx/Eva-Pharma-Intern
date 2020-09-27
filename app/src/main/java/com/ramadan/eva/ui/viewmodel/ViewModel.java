@@ -21,6 +21,7 @@ public class ViewModel extends androidx.lifecycle.ViewModel {
         Pattern passwordPattern = Pattern.compile(passwordValidation);
         Matcher emailMatcher = emailPattern.matcher(email != null ? email : "Email");
         Matcher passwordMatcher = passwordPattern.matcher(password != null ? password : "Password");
+
         if (firstName == null || lastName == null || email == null || phone == null || password == null || confirmPassword.isEmpty()) {
             Toast.makeText(view.getContext(), "All fields are required!", Toast.LENGTH_SHORT).show();
         } else {

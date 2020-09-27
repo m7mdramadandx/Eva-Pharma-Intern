@@ -8,9 +8,9 @@ import androidx.room.RoomDatabase;
 @androidx.room.Database(entities = {Contact.class}, version = 2)
 public abstract class Database extends RoomDatabase {
 
-    private static Database database;
-
     public abstract ContactDao contactDao();
+
+    private static Database database;
 
     public static synchronized Database getInstance(Context context) {
         if (database == null) {
